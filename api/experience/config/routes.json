@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/experiences/:id",
-      "handler": "Experience.findOne",
+      "handler": "Experience.findone",
       "config": {
         "policies": []
       }

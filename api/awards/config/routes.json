@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/awards/:id",
-      "handler": "Awards.findOne",
+      "handler": "Awards.findone",
       "config": {
         "policies": []
       }

@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/networks/:id",
-      "handler": "Network.findOne",
+      "handler": "Network.findone",
       "config": {
         "policies": []
       }

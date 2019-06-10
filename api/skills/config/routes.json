@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/skills/:id",
-      "handler": "Skills.findOne",
+      "handler": "Skills.findone",
       "config": {
         "policies": []
       }
