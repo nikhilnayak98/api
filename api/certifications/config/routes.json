@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/certifications/:id",
-      "handler": "Certifications.findone",
+      "handler": "Certifications.findOne",
       "config": {
         "policies": []
       }

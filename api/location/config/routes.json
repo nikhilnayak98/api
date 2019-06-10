@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/locations/:id",
-      "handler": "Location.findone",
+      "handler": "Location.findOne",
       "config": {
         "policies": []
       }

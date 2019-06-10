@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/appearances/:id",
-      "handler": "Appearances.findone",
+      "handler": "Appearances.findOne",
       "config": {
         "policies": []
       }

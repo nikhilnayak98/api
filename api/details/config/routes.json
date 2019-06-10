@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/details/:id",
-      "handler": "Details.findone",
+      "handler": "Details.findOne",
       "config": {
         "policies": []
       }

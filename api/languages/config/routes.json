@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/languages/:id",
-      "handler": "Languages.findone",
+      "handler": "Languages.findOne",
       "config": {
         "policies": []
       }

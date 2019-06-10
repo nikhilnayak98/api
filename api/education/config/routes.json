@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/educations/:id",
-      "handler": "Education.findone",
+      "handler": "Education.findOne",
       "config": {
         "policies": []
       }

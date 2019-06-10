@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/projects/:id",
-      "handler": "Projects.findone",
+      "handler": "Projects.findOne",
       "config": {
         "policies": []
       }
