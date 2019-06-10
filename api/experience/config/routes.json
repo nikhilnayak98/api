@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/experiences/:id",
-      "handler": "Experience.delete",
+      "handler": "Experience.destroy",
       "config": {
         "policies": []
       }

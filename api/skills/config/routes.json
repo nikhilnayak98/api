@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/skills/:id",
-      "handler": "Skills.delete",
+      "handler": "Skills.destroy",
       "config": {
         "policies": []
       }

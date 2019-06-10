@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/languages/:id",
-      "handler": "Languages.delete",
+      "handler": "Languages.destroy",
       "config": {
         "policies": []
       }

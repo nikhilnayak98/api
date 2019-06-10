@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/projects/:id",
-      "handler": "Projects.delete",
+      "handler": "Projects.destroy",
       "config": {
         "policies": []
       }

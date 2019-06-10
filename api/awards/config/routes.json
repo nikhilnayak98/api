@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/awards/:id",
-      "handler": "Awards.delete",
+      "handler": "Awards.destroy",
       "config": {
         "policies": []
       }

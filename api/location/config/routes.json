@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/locations/:id",
-      "handler": "Location.delete",
+      "handler": "Location.destroy",
       "config": {
         "policies": []
       }

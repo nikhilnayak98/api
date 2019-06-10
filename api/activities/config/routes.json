@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/activities/:id",
-      "handler": "Activities.delete",
+      "handler": "Activities.destroy",
       "config": {
         "policies": []
       }

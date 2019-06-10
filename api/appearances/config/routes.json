@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/appearances/:id",
-      "handler": "Appearances.delete",
+      "handler": "Appearances.destroy",
       "config": {
         "policies": []
       }

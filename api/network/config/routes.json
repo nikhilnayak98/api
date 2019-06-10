@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/networks/:id",
-      "handler": "Network.delete",
+      "handler": "Network.destroy",
       "config": {
         "policies": []
       }

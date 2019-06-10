@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/details/:id",
-      "handler": "Details.delete",
+      "handler": "Details.destroy",
       "config": {
         "policies": []
       }

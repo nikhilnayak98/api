@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/certifications/:id",
-      "handler": "Certifications.delete",
+      "handler": "Certifications.destroy",
       "config": {
         "policies": []
       }

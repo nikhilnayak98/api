@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/educations/:id",
-      "handler": "Education.delete",
+      "handler": "Education.destroy",
       "config": {
         "policies": []
       }
