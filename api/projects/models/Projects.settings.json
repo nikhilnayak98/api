@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "projects",
+  "info": {
+    "name": "projects",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "sourceUrl": {
+      "type": "string"
+    },
+    "liveUrl": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

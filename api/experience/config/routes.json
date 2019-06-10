@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/experiences",
+      "handler": "Experience.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/experiences/count",
+      "handler": "Experience.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/experiences/:id",
+      "handler": "Experience.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/experiences",
+      "handler": "Experience.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/experiences/:id",
+      "handler": "Experience.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/experiences/:id",
+      "handler": "Experience.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

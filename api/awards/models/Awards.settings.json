@@ -1,0 +1,27 @@
+{
+  "connection": "default",
+  "collectionName": "awards",
+  "info": {
+    "name": "awards",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "awarder": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

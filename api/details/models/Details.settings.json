@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "infos",
+  "info": {
+    "name": "details",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "experiences",
+  "info": {
+    "name": "experience",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "organization": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

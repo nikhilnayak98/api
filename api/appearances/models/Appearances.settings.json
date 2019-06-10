@@ -1,0 +1,30 @@
+{
+  "connection": "default",
+  "collectionName": "appearances",
+  "info": {
+    "name": "appearances",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "eventName": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

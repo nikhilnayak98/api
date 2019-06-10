@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "languages",
+  "info": {
+    "name": "languages",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "proficiency": {
+      "type": "string"
+    }
+  }
+}

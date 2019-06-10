@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "activities",
+  "info": {
+    "name": "activities",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "organization": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

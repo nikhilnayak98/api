@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "certifications",
+  "info": {
+    "name": "certifications",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "issuer": {
+      "type": "string"
+    },
+    "issueDate": {
+      "type": "string"
+    },
+    "expirationDate": {
+      "type": "string"
+    },
+    "credentialId": {
+      "type": "string"
+    },
+    "credentialUrl": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "connection": "default",
+  "collectionName": "educations",
+  "info": {
+    "name": "education",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "universityName": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "course": {
+      "type": "string"
+    },
+    "studyType": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "gpaORpercentage": {
+      "type": "string"
+    }
+  }
+}

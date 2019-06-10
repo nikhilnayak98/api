@@ -1,0 +1,13 @@
+{
+  "name": "Resume API",
+  "description": "API for fetching ifo on resume",
+  "repository": "https://github.com/nikhilnayak98/api",
+  "logo": "https://nikhilnayak.dev/icon.png",
+  "keywords": ["node", "resume", "API"],
+  "addons": [
+    {
+      "plan": "mongolab:sandbox",
+      "as": "DATABASE"
+    }
+  ]
+}

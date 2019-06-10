@@ -1,0 +1,899 @@
+type Activities {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  organization: String
+  location: String
+  position: String
+  startDate: String
+  endDate: String
+  description: String
+}
+
+input ActivitiesInput {
+  organization: String
+  location: String
+  position: String
+  startDate: String
+  endDate: String
+  description: String
+}
+
+type Appearances {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  eventName: String
+  location: String
+  year: String
+  description: String
+}
+
+input AppearancesInput {
+  eventName: String
+  location: String
+  year: String
+  description: String
+}
+
+type Awards {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  title: String
+  year: String
+  awarder: String
+  description: String
+}
+
+input AwardsInput {
+  title: String
+  year: String
+  awarder: String
+  description: String
+}
+
+type Certifications {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  name: String
+  issuer: String
+  issueDate: String
+  expirationDate: String
+  credentialId: String
+  credentialUrl: String
+}
+
+input CertificationsInput {
+  name: String
+  issuer: String
+  issueDate: String
+  expirationDate: String
+  credentialId: String
+  credentialUrl: String
+}
+
+input createActivitiesInput {
+  data: ActivitiesInput
+}
+
+type createActivitiesPayload {
+  activity: Activities
+}
+
+input createAppearancesInput {
+  data: AppearancesInput
+}
+
+type createAppearancesPayload {
+  appearance: Appearances
+}
+
+input createAwardsInput {
+  data: AwardsInput
+}
+
+type createAwardsPayload {
+  award: Awards
+}
+
+input createCertificationsInput {
+  data: CertificationsInput
+}
+
+type createCertificationsPayload {
+  certification: Certifications
+}
+
+input createDetailsInput {
+  data: DetailsInput
+}
+
+type createDetailsPayload {
+  detail: Details
+}
+
+input createEducationInput {
+  data: EducationInput
+}
+
+type createEducationPayload {
+  education: Education
+}
+
+input createExperienceInput {
+  data: ExperienceInput
+}
+
+type createExperiencePayload {
+  experience: Experience
+}
+
+input createLanguagesInput {
+  data: LanguagesInput
+}
+
+type createLanguagesPayload {
+  language: Languages
+}
+
+input createLocationInput {
+  data: LocationInput
+}
+
+type createLocationPayload {
+  location: Location
+}
+
+input createNetworkInput {
+  data: NetworkInput
+}
+
+type createNetworkPayload {
+  network: Network
+}
+
+input createProjectsInput {
+  data: ProjectsInput
+}
+
+type createProjectsPayload {
+  project: Projects
+}
+
+input createRoleInput {
+  data: RoleInput
+}
+
+type createRolePayload {
+  role: UsersPermissionsRole
+}
+
+input createSkillsInput {
+  data: SkillsInput
+}
+
+type createSkillsPayload {
+  skill: Skills
+}
+
+input createUserInput {
+  data: UserInput
+}
+
+type createUserPayload {
+  user: UsersPermissionsUser
+}
+
+"""
+The `DateTime` scalar represents a date and time following the ISO 8601 standard
+"""
+scalar DateTime
+
+input deleteActivitiesInput {
+  where: InputID
+}
+
+type deleteActivitiesPayload {
+  activity: Activities
+}
+
+input deleteAppearancesInput {
+  where: InputID
+}
+
+type deleteAppearancesPayload {
+  appearance: Appearances
+}
+
+input deleteAwardsInput {
+  where: InputID
+}
+
+type deleteAwardsPayload {
+  award: Awards
+}
+
+input deleteCertificationsInput {
+  where: InputID
+}
+
+type deleteCertificationsPayload {
+  certification: Certifications
+}
+
+input deleteDetailsInput {
+  where: InputID
+}
+
+type deleteDetailsPayload {
+  detail: Details
+}
+
+input deleteEducationInput {
+  where: InputID
+}
+
+type deleteEducationPayload {
+  education: Education
+}
+
+input deleteExperienceInput {
+  where: InputID
+}
+
+type deleteExperiencePayload {
+  experience: Experience
+}
+
+input deleteLanguagesInput {
+  where: InputID
+}
+
+type deleteLanguagesPayload {
+  language: Languages
+}
+
+input deleteLocationInput {
+  where: InputID
+}
+
+type deleteLocationPayload {
+  location: Location
+}
+
+input deleteNetworkInput {
+  where: InputID
+}
+
+type deleteNetworkPayload {
+  network: Network
+}
+
+input deleteProjectsInput {
+  where: InputID
+}
+
+type deleteProjectsPayload {
+  project: Projects
+}
+
+input deleteRoleInput {
+  where: InputID
+}
+
+type deleteRolePayload {
+  role: UsersPermissionsRole
+}
+
+input deleteSkillsInput {
+  where: InputID
+}
+
+type deleteSkillsPayload {
+  skill: Skills
+}
+
+input deleteUserInput {
+  where: InputID
+}
+
+type deleteUserPayload {
+  user: UsersPermissionsUser
+}
+
+type Details {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  name: String
+  email: String
+  phone: String
+  website: String
+  image: String
+}
+
+input DetailsInput {
+  name: String
+  email: String
+  phone: String
+  website: String
+  image: String
+}
+
+input editActivitiesInput {
+  organization: String
+  location: String
+  position: String
+  startDate: String
+  endDate: String
+  description: String
+}
+
+input editAppearancesInput {
+  eventName: String
+  location: String
+  year: String
+  description: String
+}
+
+input editAwardsInput {
+  title: String
+  year: String
+  awarder: String
+  description: String
+}
+
+input editCertificationsInput {
+  name: String
+  issuer: String
+  issueDate: String
+  expirationDate: String
+  credentialId: String
+  credentialUrl: String
+}
+
+input editDetailsInput {
+  name: String
+  email: String
+  phone: String
+  website: String
+  image: String
+}
+
+input editEducationInput {
+  universityName: String
+  location: String
+  course: String
+  studyType: String
+  startDate: String
+  endDate: String
+  gpaORpercentage: String
+}
+
+input editExperienceInput {
+  organization: String
+  location: String
+  website: String
+  position: String
+  startDate: String
+  endDate: String
+  description: String
+}
+
+input editFileInput {
+  name: String
+  hash: String
+  sha256: String
+  ext: String
+  mime: String
+  size: String
+  url: String
+  provider: String
+  public_id: String
+  related: [ID]
+}
+
+input editLanguagesInput {
+  name: String
+  proficiency: String
+}
+
+input editLocationInput {
+  address: String
+  city: String
+  state: String
+  country: String
+  postalCode: String
+}
+
+input editNetworkInput {
+  networkName: String
+  url: String
+}
+
+input editProjectsInput {
+  name: String
+  year: String
+  sourceUrl: String
+  liveUrl: String
+  description: String
+}
+
+input editRoleInput {
+  name: String
+  description: String
+  type: String
+  permissions: [ID]
+  users: [ID]
+}
+
+input editSkillsInput {
+  name: String
+  description: String
+}
+
+input editUserInput {
+  username: String
+  email: String
+  provider: String
+  password: String
+  resetPasswordToken: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: ID
+}
+
+type Education {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  universityName: String
+  location: String
+  course: String
+  studyType: String
+  startDate: String
+  endDate: String
+  gpaORpercentage: String
+}
+
+input EducationInput {
+  universityName: String
+  location: String
+  course: String
+  studyType: String
+  startDate: String
+  endDate: String
+  gpaORpercentage: String
+}
+
+type Experience {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  organization: String
+  location: String
+  website: String
+  position: String
+  startDate: String
+  endDate: String
+  description: String
+}
+
+input ExperienceInput {
+  organization: String
+  location: String
+  website: String
+  position: String
+  startDate: String
+  endDate: String
+  description: String
+}
+
+input FileInput {
+  name: String!
+  hash: String!
+  sha256: String
+  ext: String
+  mime: String!
+  size: String!
+  url: String!
+  provider: String!
+  public_id: String
+  related: [ID]
+}
+
+input InputID {
+  id: ID!
+}
+
+scalar JSON
+
+type Languages {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  name: String
+  proficiency: String
+}
+
+input LanguagesInput {
+  name: String
+  proficiency: String
+}
+
+type Location {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  address: String
+  city: String
+  state: String
+  country: String
+  postalCode: String
+}
+
+input LocationInput {
+  address: String
+  city: String
+  state: String
+  country: String
+  postalCode: String
+}
+
+"""The `Long` scalar type represents 52-bit integers"""
+scalar Long
+
+union Morph = UsersPermissionsMe | UsersPermissionsMeRole | Activities | createActivitiesPayload | updateActivitiesPayload | deleteActivitiesPayload | Appearances | createAppearancesPayload | updateAppearancesPayload | deleteAppearancesPayload | Awards | createAwardsPayload | updateAwardsPayload | deleteAwardsPayload | Certifications | createCertificationsPayload | updateCertificationsPayload | deleteCertificationsPayload | Details | createDetailsPayload | updateDetailsPayload | deleteDetailsPayload | Education | createEducationPayload | updateEducationPayload | deleteEducationPayload | Experience | createExperiencePayload | updateExperiencePayload | deleteExperiencePayload | Languages | createLanguagesPayload | updateLanguagesPayload | deleteLanguagesPayload | Location | createLocationPayload | updateLocationPayload | deleteLocationPayload | Network | createNetworkPayload | updateNetworkPayload | deleteNetworkPayload | Projects | createProjectsPayload | updateProjectsPayload | deleteProjectsPayload | Skills | createSkillsPayload | updateSkillsPayload | deleteSkillsPayload | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | createUserPayload | updateUserPayload | deleteUserPayload
+
+type Mutation {
+  createActivities(input: createActivitiesInput): createActivitiesPayload
+  updateActivities(input: updateActivitiesInput): updateActivitiesPayload
+  deleteActivities(input: deleteActivitiesInput): deleteActivitiesPayload
+  createAppearances(input: createAppearancesInput): createAppearancesPayload
+  updateAppearances(input: updateAppearancesInput): updateAppearancesPayload
+  deleteAppearances(input: deleteAppearancesInput): deleteAppearancesPayload
+  createAwards(input: createAwardsInput): createAwardsPayload
+  updateAwards(input: updateAwardsInput): updateAwardsPayload
+  deleteAwards(input: deleteAwardsInput): deleteAwardsPayload
+  createCertifications(input: createCertificationsInput): createCertificationsPayload
+  updateCertifications(input: updateCertificationsInput): updateCertificationsPayload
+  deleteCertifications(input: deleteCertificationsInput): deleteCertificationsPayload
+  createDetails(input: createDetailsInput): createDetailsPayload
+  updateDetails(input: updateDetailsInput): updateDetailsPayload
+  deleteDetails(input: deleteDetailsInput): deleteDetailsPayload
+  createEducation(input: createEducationInput): createEducationPayload
+  updateEducation(input: updateEducationInput): updateEducationPayload
+  deleteEducation(input: deleteEducationInput): deleteEducationPayload
+  createExperience(input: createExperienceInput): createExperiencePayload
+  updateExperience(input: updateExperienceInput): updateExperiencePayload
+  deleteExperience(input: deleteExperienceInput): deleteExperiencePayload
+  createLanguages(input: createLanguagesInput): createLanguagesPayload
+  updateLanguages(input: updateLanguagesInput): updateLanguagesPayload
+  deleteLanguages(input: deleteLanguagesInput): deleteLanguagesPayload
+  createLocation(input: createLocationInput): createLocationPayload
+  updateLocation(input: updateLocationInput): updateLocationPayload
+  deleteLocation(input: deleteLocationInput): deleteLocationPayload
+  createNetwork(input: createNetworkInput): createNetworkPayload
+  updateNetwork(input: updateNetworkInput): updateNetworkPayload
+  deleteNetwork(input: deleteNetworkInput): deleteNetworkPayload
+  createProjects(input: createProjectsInput): createProjectsPayload
+  updateProjects(input: updateProjectsInput): updateProjectsPayload
+  deleteProjects(input: deleteProjectsInput): deleteProjectsPayload
+  createSkills(input: createSkillsInput): createSkillsPayload
+  updateSkills(input: updateSkillsInput): updateSkillsPayload
+  deleteSkills(input: deleteSkillsInput): deleteSkillsPayload
+
+  """Create a new role"""
+  createRole(input: createRoleInput): createRolePayload
+
+  """Update an existing role"""
+  updateRole(input: updateRoleInput): updateRolePayload
+
+  """Delete an existing role"""
+  deleteRole(input: deleteRoleInput): deleteRolePayload
+
+  """Create a new user"""
+  createUser(input: createUserInput): createUserPayload
+
+  """Update an existing user"""
+  updateUser(input: updateUserInput): updateUserPayload
+
+  """Delete an existing user"""
+  deleteUser(input: deleteUserInput): deleteUserPayload
+  upload(refId: ID, ref: String, source: String, file: Upload!): UploadFile!
+}
+
+type Network {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  networkName: String
+  url: String
+}
+
+input NetworkInput {
+  networkName: String
+  url: String
+}
+
+type Projects {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  name: String
+  year: String
+  sourceUrl: String
+  liveUrl: String
+  description: String
+}
+
+input ProjectsInput {
+  name: String
+  year: String
+  sourceUrl: String
+  liveUrl: String
+  description: String
+}
+
+type Query {
+  activity(id: ID!): Activities
+  activities(sort: String, limit: Int, start: Int, where: JSON): [Activities]
+  appearance(id: ID!): Appearances
+  appearances(sort: String, limit: Int, start: Int, where: JSON): [Appearances]
+  award(id: ID!): Awards
+  awards(sort: String, limit: Int, start: Int, where: JSON): [Awards]
+  certification(id: ID!): Certifications
+  certifications(sort: String, limit: Int, start: Int, where: JSON): [Certifications]
+  detail(id: ID!): Details
+  details(sort: String, limit: Int, start: Int, where: JSON): [Details]
+  education(id: ID!): Education
+  educations(sort: String, limit: Int, start: Int, where: JSON): [Education]
+  experience(id: ID!): Experience
+  experiences(sort: String, limit: Int, start: Int, where: JSON): [Experience]
+  language(id: ID!): Languages
+  languages(sort: String, limit: Int, start: Int, where: JSON): [Languages]
+  location(id: ID!): Location
+  locations(sort: String, limit: Int, start: Int, where: JSON): [Location]
+  network(id: ID!): Network
+  networks(sort: String, limit: Int, start: Int, where: JSON): [Network]
+  project(id: ID!): Projects
+  projects(sort: String, limit: Int, start: Int, where: JSON): [Projects]
+  skill(id: ID!): Skills
+  skills(sort: String, limit: Int, start: Int, where: JSON): [Skills]
+  files(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]
+  role(id: ID!): UsersPermissionsRole
+
+  """
+  Retrieve all the existing roles. You can't apply filters on this query.
+  """
+  roles(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsRole]
+  user(id: ID!): UsersPermissionsUser
+  users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser]
+  me: UsersPermissionsMe
+}
+
+input RoleInput {
+  name: String!
+  description: String
+  type: String
+  permissions: [ID]
+  users: [ID]
+}
+
+type Skills {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  name: String
+  description: String
+}
+
+input SkillsInput {
+  name: String
+  description: String
+}
+
+input updateActivitiesInput {
+  where: InputID
+  data: editActivitiesInput
+}
+
+type updateActivitiesPayload {
+  activity: Activities
+}
+
+input updateAppearancesInput {
+  where: InputID
+  data: editAppearancesInput
+}
+
+type updateAppearancesPayload {
+  appearance: Appearances
+}
+
+input updateAwardsInput {
+  where: InputID
+  data: editAwardsInput
+}
+
+type updateAwardsPayload {
+  award: Awards
+}
+
+input updateCertificationsInput {
+  where: InputID
+  data: editCertificationsInput
+}
+
+type updateCertificationsPayload {
+  certification: Certifications
+}
+
+input updateDetailsInput {
+  where: InputID
+  data: editDetailsInput
+}
+
+type updateDetailsPayload {
+  detail: Details
+}
+
+input updateEducationInput {
+  where: InputID
+  data: editEducationInput
+}
+
+type updateEducationPayload {
+  education: Education
+}
+
+input updateExperienceInput {
+  where: InputID
+  data: editExperienceInput
+}
+
+type updateExperiencePayload {
+  experience: Experience
+}
+
+input updateLanguagesInput {
+  where: InputID
+  data: editLanguagesInput
+}
+
+type updateLanguagesPayload {
+  language: Languages
+}
+
+input updateLocationInput {
+  where: InputID
+  data: editLocationInput
+}
+
+type updateLocationPayload {
+  location: Location
+}
+
+input updateNetworkInput {
+  where: InputID
+  data: editNetworkInput
+}
+
+type updateNetworkPayload {
+  network: Network
+}
+
+input updateProjectsInput {
+  where: InputID
+  data: editProjectsInput
+}
+
+type updateProjectsPayload {
+  project: Projects
+}
+
+input updateRoleInput {
+  where: InputID
+  data: editRoleInput
+}
+
+type updateRolePayload {
+  role: UsersPermissionsRole
+}
+
+input updateSkillsInput {
+  where: InputID
+  data: editSkillsInput
+}
+
+type updateSkillsPayload {
+  skill: Skills
+}
+
+input updateUserInput {
+  where: InputID
+  data: editUserInput
+}
+
+type updateUserPayload {
+  user: UsersPermissionsUser
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
+
+type UploadFile {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  name: String!
+  hash: String!
+  sha256: String
+  ext: String
+  mime: String!
+  size: String!
+  url: String!
+  provider: String!
+  public_id: String
+  related(sort: String, limit: Int, start: Int, where: JSON): [Morph]
+}
+
+input UserInput {
+  username: String!
+  email: String!
+  provider: String
+  password: String
+  resetPasswordToken: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: ID
+}
+
+type UsersPermissionsMe {
+  _id: ID!
+  username: String!
+  email: String!
+  confirmed: Boolean
+  blocked: Boolean
+  role: UsersPermissionsMeRole
+}
+
+type UsersPermissionsMeRole {
+  _id: ID!
+  name: String!
+  description: String
+  type: String
+}
+
+type UsersPermissionsPermission {
+  id: ID!
+  type: String!
+  controller: String!
+  action: String!
+  enabled: Boolean!
+  policy: String
+  role: UsersPermissionsRole
+}
+
+type UsersPermissionsRole {
+  id: ID!
+  name: String!
+  description: String
+  type: String
+  permissions(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsPermission]
+  users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser]
+}
+
+type UsersPermissionsUser {
+  id: ID!
+  created_at: DateTime!
+  updated_at: DateTime!
+  username: String!
+  email: String!
+  provider: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: UsersPermissionsRole
+}

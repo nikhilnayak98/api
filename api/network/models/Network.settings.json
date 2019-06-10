@@ -1,0 +1,21 @@
+{
+  "connection": "default",
+  "collectionName": "networks",
+  "info": {
+    "name": "network",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "networkName": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
