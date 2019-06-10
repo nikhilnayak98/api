@@ -17,14 +17,6 @@
       }
     },
     {
-      "method": "GET",
-      "path": "/activities/:id",
-      "handler": "Activities.findOne",
-      "config": {
-        "policies": []
-      }
-    },
-    {
       "method": "POST",
       "path": "/activities",
       "handler": "Activities.create",
