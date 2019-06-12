@@ -4,11 +4,11 @@
     "version": "1.0.0",
     "title": "DOCUMENTATION",
     "description": "",
-    "termsOfService": "YOUR_TERMS_OF_SERVICE_URL",
+    "termsOfService": "https://api.nikhilnayak.dev/terms.html",
     "contact": {
-      "name": "TEAM",
-      "email": "contact-email@something.io",
-      "url": "mywebsite.io"
+      "name": "Nikhil Nayak",
+      "email": "nikhilnayak98@gmail.com",
+      "url": "https://nikhilnayak.dev"
     },
     "license": {
       "name": "Apache 2.0",
@@ -21,21 +21,13 @@
   },
   "servers": [
     {
-      "url": "http://localhost:1337",
-      "description": "Development server"
-    },
-    {
-      "url": "YOUR_STAGING_SERVER",
-      "description": "Staging server server"
-    },
-    {
-      "url": "YOUR_PRODUCTION_SERVER",
-      "description": "Production server"
+      "url": "",
+      "description": "api.nikhilnayak.dev - Production Server"
     }
   ],
   "externalDocs": {
     "description": "Find out more",
-    "url": "https://strapi.io/documentation/3.x.x/"
+    "url": "https://nikhilnayak.dev"
   },
   "security": [
     {
