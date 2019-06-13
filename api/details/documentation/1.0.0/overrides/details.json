@@ -1,17 +1,4 @@
 {
   "paths": {
-    "/details": {
-      "post": {
-        "deprecated": true
-      }
-    },
-    "/details/{id}": {
-      "put": {
-        "deprecated": true
-      },
-      "delete": {
-        "deprecated": true
-      }
-    }
   }
 }

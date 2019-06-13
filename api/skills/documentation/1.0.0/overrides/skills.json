@@ -1,17 +1,4 @@
 {
   "paths": {
-    "/skills": {
-      "post": {
-        "deprecated": true
-      }
-    },
-    "/skills/{id}": {
-      "put": {
-        "deprecated": true
-      },
-      "delete": {
-        "deprecated": true
-      }
-    }
   }
 }

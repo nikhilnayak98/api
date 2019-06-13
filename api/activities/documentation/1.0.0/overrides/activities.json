@@ -1,17 +1,4 @@
 {
   "paths": {
-    "/activities": {
-      "post": {
-        "deprecated": true
-      }
-    },
-    "/activities/{id}": {
-      "put": {
-        "deprecated": true
-      },
-      "delete": {
-        "deprecated": true
-      }
-    }
   }
 }

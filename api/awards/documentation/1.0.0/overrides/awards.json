@@ -1,17 +1,4 @@
 {
   "paths": {
-    "/awards": {
-      "post": {
-        "deprecated": true
-      }
-    },
-    "/awards/{id}": {
-      "put": {
-        "deprecated": true
-      },
-      "delete": {
-        "deprecated": true
-      }
-    }
   }
 }

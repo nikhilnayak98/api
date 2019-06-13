@@ -1,17 +1,4 @@
 {
   "paths": {
-    "/experiences": {
-      "post": {
-        "deprecated": true
-      }
-    },
-    "/experiences/{id}": {
-      "put": {
-        "deprecated": true
-      },
-      "delete": {
-        "deprecated": true
-      }
-    }
   }
 }

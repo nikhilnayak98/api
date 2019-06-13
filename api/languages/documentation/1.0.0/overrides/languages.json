@@ -1,17 +1,4 @@
 {
   "paths": {
-    "/languages": {
-      "post": {
-        "deprecated": true
-      }
-    },
-    "/languages/{id}": {
-      "put": {
-        "deprecated": true
-      },
-      "delete": {
-        "deprecated": true
-      }
-    }
   }
 }
