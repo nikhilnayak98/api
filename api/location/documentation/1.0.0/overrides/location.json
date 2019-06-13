@@ -1,0 +1,17 @@
+{
+  "paths": {
+    "/locations": {
+      "post": {
+        "deprecated": true
+      }
+    },
+    "/locations/{id}": {
+      "put": {
+        "deprecated": true
+      },
+      "delete": {
+        "deprecated": true
+      }
+    }
+  }
+}

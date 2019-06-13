@@ -1,0 +1,17 @@
+{
+  "paths": {
+    "/networks": {
+      "post": {
+        "deprecated": true
+      }
+    },
+    "/networks/{id}": {
+      "put": {
+        "deprecated": true
+      },
+      "delete": {
+        "deprecated": true
+      }
+    }
+  }
+}

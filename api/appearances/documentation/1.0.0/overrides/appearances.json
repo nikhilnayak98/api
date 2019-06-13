@@ -1,0 +1,17 @@
+{
+  "paths": {
+    "/appearances": {
+      "post": {
+        "deprecated": true
+      }
+    },
+    "/appearances/{id}": {
+      "put": {
+        "deprecated": true
+      },
+      "delete": {
+        "deprecated": true
+      }
+    }
+  }
+}
