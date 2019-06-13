@@ -6995,8 +6995,8 @@
         ],
         "security": [],
         "externalDocs": {
-          "description": "Find out more about the authentication flow in the strapi documentation",
-          "url": "https://strapi.io/documentation/guides/authentication.html#providers"
+          "description": "",
+          "url": ""
         }
       }
     },
@@ -7070,15 +7070,15 @@
                 }
               },
               "example": {
-                "identifier": "hi@strapi.io",
+                "identifier": "hi@nikhilnayak.dev",
                 "password": "superSecure123"
               }
             }
           }
         },
         "externalDocs": {
-          "description": "Find out more in the strapi's documentation",
-          "url": "https://strapi.io/documentation/guides/authentication.html#login"
+          "description": "",
+          "url": ""
         },
         "security": []
       }
@@ -7164,8 +7164,8 @@
         },
         "security": [],
         "externalDocs": {
-          "description": "Find out more in the strapi's documentation",
-          "url": "https://strapi.io/documentation/guides/authentication.html#usage"
+          "description": "",
+          "url": ""
         }
       }
     },
@@ -7232,8 +7232,8 @@
           }
         ],
         "externalDocs": {
-          "description": "Find out more in the strapi's documentation",
-          "url": "https://strapi.io/documentation/guides/authentication.html#providers"
+          "description": "",
+          "url": ""
         }
       }
     },
@@ -7296,16 +7296,16 @@
                 }
               },
               "example": {
-                "email": "hi@strapi.io",
-                "url": "http://mon-site.com/rest-password"
+                "email": "hi@nikhilnayak.dev",
+                "url": "https://api.nikhilnayak.dev/rest-password"
               }
             }
           }
         },
         "security": [],
         "externalDocs": {
-          "description": "Find out more in the strapi's documentation",
-          "url": "https://strapi.io/documentation/guides/authentication.html#send-forgot-password-request"
+          "description": "",
+          "url": ""
         }
       }
     },
@@ -8718,8 +8718,8 @@
       "name": "Authentication",
       "description": "All the routes related to the authentication",
       "externalDocs": {
-        "description": "Find out more in strapi's documentation",
-        "url": "https://strapi.io/documentation/guides/authentication.html"
+        "description": "",
+        "url": ""
       }
     },
     {
