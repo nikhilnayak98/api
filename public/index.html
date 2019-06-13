@@ -1,149 +1,389 @@
-<!doctype html>
-
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>API Documentation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="plugins/documentation/swagger-ui.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
     <style>
-      * {
-        -webkit-box-sizing: border-box;
+      html
+      {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
       }
-
-      body, html {
-        margin: 0;
-        padding: 40px 0;
+      *,
+      *:before,
+      *:after
+      {
+      box-sizing: inherit;
       }
-
-      body {
-        font: 17px/1.5 "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-        background: white;
-        margin: 0;
-        color: #33333d;
-        overflow-y: scroll;
-        overflow-x: hidden;
-      }
-
-      h1 {
-        font-size: 1.6em;
-        margin-top: 0;
-      }
-
-      h2 {
-        margin-top: 44px;
-        font-size: 1.3em;
-      }
-
-      h3 {
-        margin-top: 30px;
-        font-size: 1em;
-      }
-
-      section {
-        margin: 0 5.555555555555555%;
-      }
-
-      p {
-        font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
-      }
-
-      a {
-        color: #33a0c0;
-      }
-
-      code {
-        font-family: monospace;
-        font-size: 1.1em;
-      }
-
-      pre {
-        background: white;
-        border-top: 1px solid #eee;
-        border-bottom: 1px solid #eee;
-        padding: 25px;
-        font-family: monospace;
-        overflow-x: auto;
-      }
-
-      .wrapper {
-        padding: 0 .75em;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-
-      @media screen and (min-width:40em) {
-        body {
-          font-size: 1.0625em;
-        }
-      }
-
-      @media screen and (min-width:45em) {
-        body {
-          font-size: 1em;
-        }
-      }
-
-      @media screen and (min-width:55.5em) {
-        body {
-          font-size: 1.0625em;
-        }
-      }
-
-      @media screen and (min-width:61.5em) {
-        body {
-          font-size: 1em;
-        }
-        section {
-          margin: 0 16.666666666666664%;
-        }
-      }
-
-      @media screen and (min-width:75em) {
-        body {
-          font-size: 1.0625em;
-        }
-      }
-
-      @media screen and (min-width:87em) {
-        body {
-          font-size: 1em;
-        }
-        section {
-          margin: 0 27.77777777777778%;
-        }
-      }
-
-      @media screen and (min-width:105em) {
-        body {
-          font-size: 1.0625em;
-        }
-      }
-
-      @media screen and (min-width:117em) {
-        section {
-          margin: 0 5.555555555555555%;
-        }
-        section .wrapper {
-          width: 37.5%;
-          margin-left: 25%;
-        }
-      }
-
-      @media screen and (min-width:130em) {
-        body {
-          font-size: 1.125em;
-          max-width: 160em;
-        }
+      body
+      {
+      margin:0;
+      background: #fafafa;
       }
     </style>
   </head>
-  <body lang="en">
-    <section>
-      <div class="wrapper">
-        <h1>Welcome.</h1>
-      </div>
-    </section>
+  <body>
+    <div id="swagger-ui">
+      <section data-reactroot="" class="swagger-ui swagger-container">
+        <div class="swagger-ui">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position: absolute; width: 0px; height: 0px;">
+              <defs>
+                <symbol viewBox="0 0 20 20" id="unlocked">
+                  <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+                </symbol>
+                <symbol viewBox="0 0 20 20" id="locked">
+                  <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z"></path>
+                </symbol>
+                <symbol viewBox="0 0 20 20" id="close">
+                  <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z"></path>
+                </symbol>
+                <symbol viewBox="0 0 20 20" id="large-arrow">
+                  <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z"></path>
+                </symbol>
+                <symbol viewBox="0 0 20 20" id="large-arrow-down">
+                  <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z"></path>
+                </symbol>
+                <symbol viewBox="0 0 24 24" id="jump-to">
+                  <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z"></path>
+                </symbol>
+                <symbol viewBox="0 0 24 24" id="expand">
+                  <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"></path>
+                </symbol>
+              </defs>
+            </svg>
+          </div>
+          <div>
+            <!-- react-empty: 29 -->
+            <div class="information-container wrapper">
+              <section class="block col-12">
+                <div>
+                  <div class="info">
+                    <hgroup class="main">
+                      <h2 class="title">
+                        <!-- react-text: 36 -->DOCUMENTATION<!-- /react-text -->
+                        <span>
+                          <small>
+                            <pre class="version"><!-- react-text: 40 --> <!-- /react-text --><!-- react-text: 41 -->1.0.0<!-- /react-text --><!-- react-text: 42 --> <!-- /react-text --></pre>
+                          </small>
+                          <small style="background-color: rgb(137, 191, 4);">
+                            <pre class="version">OAS3</pre>
+                          </small>
+                        </span>
+                      </h2>
+                      <!-- react-text: 45 --><!-- /react-text -->
+                    </hgroup>
+                    <div class="description">
+                      <!-- react-empty: 47 -->
+                    </div>
+                    <div class="info__tos"><a target="_blank" href="https://api.nikhilnayak.dev/terms.html" rel="noopener noreferrer" class="link">Terms of service</a></div>
+                    <div class="info__contact">
+                      <div>
+                        <a href="https://nikhilnayak.dev" target="_blank" rel="noopener noreferrer" class="link">
+                          <!-- react-text: 53 -->Nikhil Nayak<!-- /react-text --><!-- react-text: 54 --> - Website<!-- /react-text -->
+                        </a>
+                      </div>
+                      <a href="mailto:nikhilnayak98@gmail.com" rel="noopener noreferrer" class="link">Send email to Nikhil Nayak</a>
+                    </div>
+                    <div class="info__license"><a target="_blank" href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="noopener noreferrer" class="link">Apache 2.0</a></div>
+                    <a class="info__extdocs link" target="_blank" href="https://nikhilnayak.dev" rel="noopener noreferrer">Find out more</a>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="scheme-container">
+              <section class="schemes wrapper block col-12">
+                <div>
+                  <span class="servers-title">Servers</span>
+                  <div class="servers">
+                    <label for="servers">
+                      <select>
+                        <option value=""> - api.nikhilnayak.dev - Production Server</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+                <div class="auth-wrapper">
+                  <button class="btn authorize unlocked">
+                    <span>Authorize</span>
+                    <svg width="20" height="20">
+                      <use href="#unlocked" xlink:href="#unlocked"></use>
+                    </svg>
+                  </button>
+                </div>
+              </section>
+            </div>
+            <div></div>
+            <div class="wrapper">
+              <section class="block col-12 block-desktop col-12-desktop">
+                <div>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Activities" data-tag="Activities" data-is-open="false">
+                        <a class="nostyle" href="#/Activities"><span>Activities</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Appearances" data-tag="Appearances" data-is-open="false">
+                        <a class="nostyle" href="#/Appearances"><span>Appearances</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Awards" data-tag="Awards" data-is-open="false">
+                        <a class="nostyle" href="#/Awards"><span>Awards</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Certifications" data-tag="Certifications" data-is-open="false">
+                        <a class="nostyle" href="#/Certifications"><span>Certifications</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Details" data-tag="Details" data-is-open="false">
+                        <a class="nostyle" href="#/Details"><span>Details</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Education" data-tag="Education" data-is-open="false">
+                        <a class="nostyle" href="#/Education"><span>Education</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Experience" data-tag="Experience" data-is-open="false">
+                        <a class="nostyle" href="#/Experience"><span>Experience</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Languages" data-tag="Languages" data-is-open="false">
+                        <a class="nostyle" href="#/Languages"><span>Languages</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Location" data-tag="Location" data-is-open="false">
+                        <a class="nostyle" href="#/Location"><span>Location</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Network" data-tag="Network" data-is-open="false">
+                        <a class="nostyle" href="#/Network"><span>Network</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Projects" data-tag="Projects" data-is-open="false">
+                        <a class="nostyle" href="#/Projects"><span>Projects</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Skills" data-tag="Skills" data-is-open="false">
+                        <a class="nostyle" href="#/Skills"><span>Skills</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Upload_-_File" data-tag="Upload - File" data-is-open="false">
+                        <a class="nostyle" href="#/Upload%20-%20File"><span>Upload - File</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag" id="operations-tag-Authentication" data-tag="Authentication" data-is-open="false">
+                        <a class="nostyle" href="#/Authentication"><span>Authentication</span></a>
+                        <small>
+                          <div class="renderedMarkdown">
+                            <p>All the routes related to the authentication</p>
+                          </div>
+                        </small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                  <span>
+                    <div class="opblock-tag-section">
+                      <h4 class="opblock-tag no-desc" id="operations-tag-Users-Permissions_-_User" data-tag="Users-Permissions - User" data-is-open="false">
+                        <a class="nostyle" href="#/Users-Permissions%20-%20User"><span>Users-Permissions - User</span></a><small></small>
+                        <div></div>
+                        <button class="expand-operation" title="Expand operation">
+                          <svg class="arrow" width="20" height="20">
+                            <use href="#large-arrow" xlink:href="#large-arrow"></use>
+                          </svg>
+                        </button>
+                      </h4>
+                      <noscript></noscript>
+                    </div>
+                  </span>
+                </div>
+              </section>
+            </div>
+            <div class="wrapper">
+              <section class="block col-12 block-desktop col-12-desktop">
+                <section class="models">
+                  <h4>
+                    <span>Schemas</span>
+                    <svg width="20" height="20">
+                      <use xlink:href="#large-arrow"></use>
+                    </svg>
+                  </h4>
+                  <noscript></noscript>
+                </section>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+          <section class="">
+            <!-- react-empty: 252 -->
+          </section>
+        </div>
+      </section>
+    </div>
+    <script src="plugins/documentation/swagger-ui-bundle.js"> </script>
+    <script src="plugins/documentation/swagger-ui-standalone-preset.js"> </script>
+    <script class="custom-swagger-ui">
+      window.onload = function() {
+      
+        // Build a system
+        const ui = SwaggerUIBundle({
+          url: "https://petstore.swagger.io/v2/swagger.json",
+          spec: { "openapi": "3.0.0", "info": { "version": "1.0.0", "title": "DOCUMENTATION", "description": "", "termsOfService": "https://api.nikhilnayak.dev/terms.html", "contact": { "name": "Nikhil Nayak", "email": "nikhilnayak98@gmail.com", "url": "https://nikhilnayak.dev" }, "license": { "name": "Apache 2.0", "url": "https://www.apache.org/licenses/LICENSE-2.0.html" }, "x-generation-date": "06/12/2019 6:31:54 AM" }, "x-strapi-config": { "path": "/documentation", "showGeneratedFiles": true }, "servers": [ { "url": "", "description": "api.nikhilnayak.dev - Production Server" } ], "externalDocs": { "description": "Find out more", "url": "https://nikhilnayak.dev" }, "security": [ { "bearerAuth": [] } ], "paths": { "/activities": { "get": { "deprecated": false, "description": "Find all the activities's records", "responses": { "200": { "description": "Retrieve activities document(s)", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Activities" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Activities" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/activities/count": { "get": { "deprecated": false, "description": "Retrieve the numver of activities documents", "responses": { "200": { "description": "Retrieve activities document(s)", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Activities" ], "parameters": [] } }, "/activities/{id}": { "get": { "deprecated": false, "description": "Find one activities record", "responses": { "200": { "description": "Retrieve activities document(s)", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Activities" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Activities" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/appearances": { "get": { "deprecated": false, "description": "Find all the appearances's records", "responses": { "200": { "description": "Retrieve appearances document(s)", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Appearances" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Appearances" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/appearances/count": { "get": { "deprecated": false, "description": "Retrieve the numver of appearances documents", "responses": { "200": { "description": "Retrieve appearances document(s)", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Appearances" ], "parameters": [] } }, "/appearances/{id}": { "get": { "deprecated": false, "description": "Find one appearances record", "responses": { "200": { "description": "Retrieve appearances document(s)", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Appearances" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Appearances" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/awards": { "get": { "deprecated": false, "description": "Find all the awards's records", "responses": { "200": { "description": "Retrieve awards document(s)", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Awards" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Awards" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/awards/count": { "get": { "deprecated": false, "description": "Retrieve the numver of awards documents", "responses": { "200": { "description": "Retrieve awards document(s)", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Awards" ], "parameters": [] } }, "/awards/{id}": { "get": { "deprecated": false, "description": "Find one awards record", "responses": { "200": { "description": "Retrieve awards document(s)", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Awards" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Awards" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/certifications": { "get": { "deprecated": false, "description": "Find all the certifications's records", "responses": { "200": { "description": "Retrieve certifications document(s)", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Certifications" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Certifications" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/certifications/count": { "get": { "deprecated": false, "description": "Retrieve the numver of certifications documents", "responses": { "200": { "description": "Retrieve certifications document(s)", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Certifications" ], "parameters": [] } }, "/certifications/{id}": { "get": { "deprecated": false, "description": "Find one certifications record", "responses": { "200": { "description": "Retrieve certifications document(s)", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Certifications" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Certifications" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/details": { "get": { "deprecated": false, "description": "Find all the details's records", "responses": { "200": { "description": "Retrieve details document(s)", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Details" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Details" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/details/count": { "get": { "deprecated": false, "description": "Retrieve the numver of details documents", "responses": { "200": { "description": "Retrieve details document(s)", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Details" ], "parameters": [] } }, "/details/{id}": { "get": { "deprecated": false, "description": "Find one details record", "responses": { "200": { "description": "Retrieve details document(s)", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Details" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Details" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/educations": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Education" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Education" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/educations/count": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Education" ], "parameters": [] } }, "/educations/{id}": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Education" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Education" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/experiences": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Experience" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Experience" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/experiences/count": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Experience" ], "parameters": [] } }, "/experiences/{id}": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Experience" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Experience" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/languages": { "get": { "deprecated": false, "description": "Find all the languages's records", "responses": { "200": { "description": "Retrieve languages document(s)", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Languages" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Languages" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/languages/count": { "get": { "deprecated": false, "description": "Retrieve the numver of languages documents", "responses": { "200": { "description": "Retrieve languages document(s)", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Languages" ], "parameters": [] } }, "/languages/{id}": { "get": { "deprecated": false, "description": "Find one languages record", "responses": { "200": { "description": "Retrieve languages document(s)", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Languages" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Languages" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/locations": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Location" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Location" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/locations/count": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Location" ], "parameters": [] } }, "/locations/{id}": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Location" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Location" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/networks": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Network" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Network" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/networks/count": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Network" ], "parameters": [] } }, "/networks/{id}": { "get": { "deprecated": false, "description": "", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Network" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Network" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/projects": { "get": { "deprecated": false, "description": "Find all the projects's records", "responses": { "200": { "description": "Retrieve projects document(s)", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Projects" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Projects" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/projects/count": { "get": { "deprecated": false, "description": "Retrieve the numver of projects documents", "responses": { "200": { "description": "Retrieve projects document(s)", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Projects" ], "parameters": [] } }, "/projects/{id}": { "get": { "deprecated": false, "description": "Find one projects record", "responses": { "200": { "description": "Retrieve projects document(s)", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Projects" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Projects" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/skills": { "get": { "deprecated": false, "description": "Find all the skills's records", "responses": { "200": { "description": "Retrieve skills document(s)", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Skills" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Skills" ], "parameters": [ { "name": "_limit", "in": "query", "required": false, "description": "Maximum number of results possible", "schema": { "type": "integer" }, "deprecated": false }, { "name": "_sort", "in": "query", "required": false, "description": "Sort according to a specific field.", "schema": { "type": "string" }, "deprecated": false }, { "name": "_start", "in": "query", "required": false, "description": "Skip a specific number of entries (especially useful for pagination)", "schema": { "type": "integer" }, "deprecated": false }, { "name": "=", "in": "query", "required": false, "description": "Get entries that matches exactly your input", "schema": { "type": "string" }, "deprecated": false }, { "name": "_ne", "in": "query", "required": false, "description": "Get records that are not equals to something", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lt", "in": "query", "required": false, "description": "Get record that are lower than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_lte", "in": "query", "required": false, "description": "Get records that are lower than or equal to a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gt", "in": "query", "required": false, "description": "Get records that are greater than a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_gte", "in": "query", "required": false, "description": "Get records that are greater than or equal a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_contains", "in": "query", "required": false, "description": "Get records that contains a value", "schema": { "type": "string" }, "deprecated": false }, { "name": "_containss", "in": "query", "required": false, "description": "Get records that contains (case sensitive) a value", "schema": { "type": "string" }, "deprecated": false } ] } }, "/skills/count": { "get": { "deprecated": false, "description": "Retrieve the numver of skills documents", "responses": { "200": { "description": "Retrieve skills document(s)", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Skills" ], "parameters": [] } }, "/skills/{id}": { "get": { "deprecated": false, "description": "Find one skills record", "responses": { "200": { "description": "Retrieve skills document(s)", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Skills" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Skills" ], "parameters": [ { "name": "id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/upload/files/count": { "get": { "deprecated": false, "description": "Retrieve the total number of uploaded files", "responses": { "200": { "description": "", "content": { "application/json": { "schema": { "properties": { "count": { "type": "integer" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Upload - File" ], "parameters": [] } }, "/upload/files": { "get": { "deprecated": false, "description": "Retrieve all file documents", "responses": { "200": { "description": "", "content": { "application/json": { "schema": { "type": "array", "items": { "$ref": "#/components/schemas/UploadFile" } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Upload - File" ], "parameters": [] } }, "/upload/files/{_id}": { "get": { "deprecated": false, "description": "Retrieve a single file depending on its id", "responses": { "200": { "description": "", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/UploadFile" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Upload - File" ], "parameters": [ { "name": "_id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] }, "delete": { "deprecated": false, "description": "Delete an uploaded file", "responses": { "200": { "description": "Document deleted" }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Upload - File" ], "parameters": [ { "name": "_id", "in": "path", "description": "", "deprecated": false, "required": true, "schema": { "type": "string" } } ] } }, "/connect/*": { "get": { "deprecated": false, "description": "Connect a provider", "responses": { "200": { "description": "Your user is redirected" }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "Authenticate your user with a custom provider", "tags": [ "Authentication" ], "parameters": [ { "name": "provider", "in": "path", "required": true, "deprecated": false, "description": "The name of the provider you want to use", "schema": { "type": "string" } } ], "security": [], "externalDocs": { "description": "", "url": "" } } }, "/auth/local": { "post": { "deprecated": false, "description": "Login a user using the identifiers email and password", "responses": { "200": { "description": "Response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Users-PermissionsRegisterResponse" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Authentication" ], "requestBody": { "description": "The identifier param can either be an email or a username", "required": true, "content": { "application/json": { "schema": { "required": [ "identifier", "password" ], "properties": { "identifier": { "type": "string" }, "password": { "type": "string" } } }, "example": { "identifier": "hi@nikhilnayak.dev", "password": "superSecure123" } } } }, "externalDocs": { "description": "", "url": "" }, "security": [] } }, "/auth/local/register": { "post": { "deprecated": false, "description": "Register a new user with the default role", "responses": { "200": { "description": "Successfully register a user", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Users-PermissionsRegisterResponse" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Authentication" ], "requestBody": { "description": "", "required": true, "content": { "application/json": { "schema": { "required": [ "username", "email", "password" ], "properties": { "username": { "type": "string", "minLength": 3 }, "email": { "type": "string", "minLength": 6 }, "password": { "type": "string", "minLength": 6 } } } } } }, "security": [], "externalDocs": { "description": "", "url": "" } } }, "/auth/{provider}/callback": { "get": { "deprecated": false, "description": "Successfull redirection after approving a provider", "responses": { "200": { "description": "Successfull redirection after approving a provider", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Users-PermissionsRegisterResponse" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Authentication" ], "parameters": [ { "name": "provider", "in": "path", "description": "The provider used to authenticate your user", "deprecated": false, "required": true, "schema": { "type": "string" } } ], "externalDocs": { "description": "", "url": "" } } }, "/auth/forgot-password": { "post": { "deprecated": false, "description": "Send the reset password email link", "responses": { "200": { "description": "Email sent" }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "Send an email to reset your password", "tags": [ "Authentication" ], "requestBody": { "description": "", "required": true, "content": { "application/json": { "schema": { "properties": { "email": { "type": "string" }, "url": { "type": "string" } } }, "example": { "email": "hi@nikhilnayak.dev", "url": "https://api.nikhilnayak.dev/rest-password" } } } }, "security": [], "externalDocs": { "description": "", "url": "" } } }, "/auth/reset-password": { "post": { "deprecated": false, "description": "Change a user's password", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Users-PermissionsRegisterResponse" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Authentication" ], "requestBody": { "description": "", "required": true, "content": { "application/json": { "schema": { "required": [ "code", "password", "passwordConfirmation" ], "properties": { "code": { "type": "string" }, "password": { "type": "string" }, "passwordConfirmation": { "type": "string" } } } } } }, "security": [] } }, "/auth/email-confirmation": { "get": { "deprecated": false, "description": "Validate a user account", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "properties": { "foo": { "type": "string" } } } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Authentication" ], "parameters": [], "security": [] } }, "/users/me": { "get": { "deprecated": false, "description": "Retrieve the logged in user informations", "responses": { "200": { "description": "response", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Users-PermissionsUser" } } } }, "403": { "description": "Forbidden", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "404": { "description": "Not found", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } }, "default": { "description": "unexpected error", "content": { "application/json": { "schema": { "$ref": "#/components/schemas/Error" } } } } }, "summary": "", "tags": [ "Users-Permissions - User" ], "parameters": [] } } }, "components": { "schemas": { "Activities": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "organization": { "type": "string" }, "location": { "type": "string" }, "position": { "type": "string" }, "startDate": { "type": "string" }, "endDate": { "type": "string" }, "description": { "type": "string" } } }, "NewActivities": { "properties": { "organization": { "type": "string" }, "location": { "type": "string" }, "position": { "type": "string" }, "startDate": { "type": "string" }, "endDate": { "type": "string" }, "description": { "type": "string" } } }, "Appearances": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "eventName": { "type": "string" }, "location": { "type": "string" }, "year": { "type": "string" }, "description": { "type": "string" } } }, "NewAppearances": { "properties": { "eventName": { "type": "string" }, "location": { "type": "string" }, "year": { "type": "string" }, "description": { "type": "string" } } }, "Awards": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "title": { "type": "string" }, "year": { "type": "string" }, "awarder": { "type": "string" }, "description": { "type": "string" } } }, "NewAwards": { "properties": { "title": { "type": "string" }, "year": { "type": "string" }, "awarder": { "type": "string" }, "description": { "type": "string" } } }, "Certifications": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "name": { "type": "string" }, "issuer": { "type": "string" }, "issueDate": { "type": "string" }, "expirationDate": { "type": "string" }, "credentialId": { "type": "string" }, "credentialUrl": { "type": "string" } } }, "NewCertifications": { "properties": { "name": { "type": "string" }, "issuer": { "type": "string" }, "issueDate": { "type": "string" }, "expirationDate": { "type": "string" }, "credentialId": { "type": "string" }, "credentialUrl": { "type": "string" } } }, "Details": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "name": { "type": "string" }, "email": { "type": "string" }, "phone": { "type": "string" }, "website": { "type": "string" }, "image": { "type": "string" } } }, "NewDetails": { "properties": { "name": { "type": "string" }, "email": { "type": "string" }, "phone": { "type": "string" }, "website": { "type": "string" }, "image": { "type": "string" } } }, "Education": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "universityName": { "type": "string" }, "location": { "type": "string" }, "course": { "type": "string" }, "studyType": { "type": "string" }, "startDate": { "type": "string" }, "endDate": { "type": "string" }, "gpaORpercentage": { "type": "string" } } }, "NewEducation": { "properties": { "universityName": { "type": "string" }, "location": { "type": "string" }, "course": { "type": "string" }, "studyType": { "type": "string" }, "startDate": { "type": "string" }, "endDate": { "type": "string" }, "gpaORpercentage": { "type": "string" } } }, "Experience": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "organization": { "type": "string" }, "location": { "type": "string" }, "website": { "type": "string" }, "position": { "type": "string" }, "startDate": { "type": "string" }, "endDate": { "type": "string" }, "description": { "type": "string" } } }, "NewExperience": { "properties": { "organization": { "type": "string" }, "location": { "type": "string" }, "website": { "type": "string" }, "position": { "type": "string" }, "startDate": { "type": "string" }, "endDate": { "type": "string" }, "description": { "type": "string" } } }, "Languages": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "name": { "type": "string" }, "proficiency": { "type": "string" } } }, "NewLanguages": { "properties": { "name": { "type": "string" }, "proficiency": { "type": "string" } } }, "Location": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "address": { "type": "string" }, "city": { "type": "string" }, "state": { "type": "string" }, "country": { "type": "string" }, "postalCode": { "type": "string" } } }, "NewLocation": { "properties": { "address": { "type": "string" }, "city": { "type": "string" }, "state": { "type": "string" }, "country": { "type": "string" }, "postalCode": { "type": "string" } } }, "Network": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "networkName": { "type": "string" }, "url": { "type": "string" } } }, "NewNetwork": { "properties": { "networkName": { "type": "string" }, "url": { "type": "string" } } }, "Projects": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "name": { "type": "string" }, "year": { "type": "string" }, "sourceUrl": { "type": "string" }, "liveUrl": { "type": "string" }, "description": { "type": "string" } } }, "NewProjects": { "properties": { "name": { "type": "string" }, "year": { "type": "string" }, "sourceUrl": { "type": "string" }, "liveUrl": { "type": "string" }, "description": { "type": "string" } } }, "Skills": { "required": [ "id" ], "properties": { "id": { "type": "string" }, "name": { "type": "string" }, "description": { "type": "string" } } }, "NewSkills": { "properties": { "name": { "type": "string" }, "description": { "type": "string" } } }, "UploadFile": { "properties": { "name": { "type": "string" }, "sha256": { "type": "string" }, "hash": { "type": "string" }, "ext": { "type": "string" }, "size": { "type": "string" }, "mime": { "type": "string" }, "url": { "type": "string" }, "provider": { "type": "string" }, "updatedAt": { "type": "string" }, "createdAt": { "type": "string" }, "related": { "type": "array", "items": { "type": "string" } } } }, "Users-PermissionsRole": { "required": [ "id", "name" ], "properties": { "id": { "type": "string" }, "name": { "type": "string", "minLength": 3 }, "description": { "type": "string" }, "type": { "type": "string" }, "permissions": { "type": "array", "items": { "required": [ "id", "type", "controller", "action", "enabled" ], "properties": { "id": { "type": "string" }, "type": { "type": "string" }, "controller": { "type": "string" }, "action": { "type": "string" }, "enabled": { "type": "boolean" }, "policy": { "type": "string" }, "role": { "type": "string" } } } }, "users": { "type": "array", "items": { "required": [ "id", "username", "email" ], "properties": { "id": { "type": "string" }, "username": { "type": "string" }, "email": { "type": "string" }, "provider": { "type": "string" }, "password": { "type": "string" }, "resetPasswordToken": { "type": "string" }, "confirmed": { "type": "boolean" }, "blocked": { "type": "boolean" }, "role": { "type": "string" } } } } } }, "NewUsers-PermissionsRole": { "required": [ "name" ], "properties": { "name": { "type": "string", "minLength": 3 }, "description": { "type": "string" }, "type": { "type": "string" }, "permissions": { "type": "array", "items": { "type": "string" } }, "users": { "type": "array", "items": { "type": "string" } } } }, "Users-PermissionsUser": { "required": [ "id", "username", "email" ], "properties": { "id": { "type": "string" }, "username": { "type": "string", "minLength": 3 }, "email": { "type": "string", "minLength": 6 }, "provider": { "type": "string" }, "confirmed": { "type": "boolean", "default": false }, "blocked": { "type": "boolean", "default": false }, "role": { "required": [ "id", "name" ], "properties": { "id": { "type": "string" }, "name": { "type": "string" }, "description": { "type": "string" }, "type": { "type": "string" }, "permissions": { "type": "array", "items": { "type": "string" } }, "users": { "type": "array", "items": { "type": "string" } } } } } }, "NewUsers-PermissionsUser": { "required": [ "username", "email" ], "properties": { "username": { "type": "string", "minLength": 3 }, "email": { "type": "string", "minLength": 6 }, "provider": { "type": "string" }, "password": { "type": "string", "minLength": 6 }, "resetPasswordToken": { "type": "string" }, "confirmed": { "type": "boolean", "default": false }, "blocked": { "type": "boolean", "default": false }, "role": { "type": "string" } } }, "Users-PermissionsRegisterResponse": { "properties": { "jwt": { "type": "string" }, "user": { "$ref": "#/components/schemas/Users-PermissionsUser" } } }, "Error": { "required": [ "code", "message" ], "properties": { "code": { "type": "integer", "format": "int32" }, "message": { "type": "string" } } } }, "securitySchemes": { "bearerAuth": { "type": "http", "scheme": "bearer", "bearerFormat": "JWT" } } }, "tags": [ { "name": "Activities" }, { "name": "Appearances" }, { "name": "Awards" }, { "name": "Certifications" }, { "name": "Details" }, { "name": "Education" }, { "name": "Experience" }, { "name": "Languages" }, { "name": "Location" }, { "name": "Network" }, { "name": "Projects" }, { "name": "Skills" }, { "name": "Upload - File" }, { "name": "Authentication", "description": "All the routes related to the authentication", "externalDocs": { "description": "", "url": "" } }, { "name": "Users-Permissions - User" }]},
+          dom_id: '#swagger-ui',
+          docExpansion: "none",
+          deepLinking: true,
+          presets: [
+            SwaggerUIBundle.presets.apis,
+            SwaggerUIStandalonePreset
+          ],
+          plugins: [
+            SwaggerUIBundle.plugins.DownloadUrl
+          ],
+          layout: "StandaloneLayout"
+        })
+      
+        window.ui = ui
+      }
+    </script>
   </body>
 </html>
