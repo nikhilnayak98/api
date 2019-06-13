@@ -5,8 +5,8 @@
         "tags": ["Authentication"],
         "security": [],
         "externalDocs": {
-          "description": "Find out more in the strapi's documentation",
-          "url": "https://strapi.io/documentation/guides/authentication.html#usage"
+          "description": "",
+          "url": ""
         },
         "responses": {
           "200": {
@@ -88,8 +88,8 @@
           }
         ],
         "externalDocs": {
-          "description": "Find out more about the authentication flow in the strapi documentation",
-          "url": "https://strapi.io/documentation/guides/authentication.html#providers"
+          "description": "",
+          "url": ""
         },
         "responses": {
           "200": {
@@ -101,8 +101,8 @@
     "/auth/local": {
       "post": {
         "externalDocs": {
-          "description": "Find out more in the strapi's documentation",
-          "url": "https://strapi.io/documentation/guides/authentication.html#login"
+          "description": "",
+          "url": ""
         },
         "tags": ["Authentication"],
         "security": [],
@@ -122,7 +122,7 @@
                 }
               },
               "example": {
-                "identifier": "hi@strapi.io",
+                "identifier": "user",
                 "password": "superSecure123"
               }
             }
@@ -146,8 +146,8 @@
       "get": {
         "tags": ["Authentication"],
         "externalDocs": {
-          "description": "Find out more in the strapi's documentation",
-          "url": "https://strapi.io/documentation/guides/authentication.html#providers"
+          "description": "",
+          "url": ""
         },
         "parameters": [
           {
@@ -181,8 +181,8 @@
         "security": [],
         "summary": "Send an email to reset your password",
         "externalDocs": {
-          "description": "Find out more in the strapi's documentation",
-          "url": "https://strapi.io/documentation/guides/authentication.html#send-forgot-password-request"
+          "description": "",
+          "url": ""
         },
         "requestBody": {
           "description": "",
@@ -200,8 +200,8 @@
                 }
               },
               "example": {
-                "email": "hi@strapi.io",
-                "url": "http://mon-site.com/rest-password"
+                "email": "demo@nikhilnayak.dev",
+                "url": "https://api.nikhilnayak.dev/rest-password"
               }
             }
           }
@@ -273,8 +273,8 @@
       "name": "Authentication",
       "description": "All the routes related to the authentication",
       "externalDocs": {
-        "description": "Find out more in strapi's documentation",
-        "url": "https://strapi.io/documentation/guides/authentication.html"
+        "description": "",
+        "url": ""
       }
     },
     {
