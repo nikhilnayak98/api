@@ -1,4 +1,17 @@
 {
   "paths": {
+    "/certifications": {
+      "post": {
+        "deprecated": true
+      }
+    },
+    "/certifications/{id}": {
+      "put": {
+        "deprecated": true
+      },
+      "delete": {
+        "deprecated": true
+      }
+    }
   }
 }

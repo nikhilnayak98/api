@@ -1,4 +1,17 @@
 {
   "paths": {
+    "/projects": {
+      "post": {
+        "deprecated": true
+      }
+    },
+    "/projects/{id}": {
+      "put": {
+        "deprecated": true
+      },
+      "delete": {
+        "deprecated": true
+      }
+    }
   }
 }
