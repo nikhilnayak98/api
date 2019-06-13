@@ -1,5 +1,103 @@
 {
   "paths": {
+    "/auth/local/register": {
+      "post": {
+        "tags": ["Authentication"],
+        "security": [],
+        "externalDocs": {
+          "description": "",
+          "url": ""
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully register a user",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Users-PermissionsRegisterResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "required": ["username", "email", "password"],
+                "properties": {
+                  "username": {
+                    "type": "string",
+                    "minLength": 3
+                  },
+                  "email": {
+                    "type": "string",
+                    "minLength": 6
+                  },
+                  "password": {
+                    "type": "string",
+                    "minLength": 6
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/email-confirmation": {
+      "get": {
+        "tags": ["Authentication"],
+        "security": []
+      }
+    },
+    "/users-permissions/search/{id}": {
+      "get": {
+        "summary": "Retrieve a list of users by searching for their username or email",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "A string matching a user's email or username",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/connect/*": {
+      "get": {
+        "summary": "Authenticate your user with a custom provider",
+        "tags": ["Authentication"],
+        "security": [],
+        "parameters": [
+          {
+            "name": "provider",
+            "in": "path",
+            "required": true,
+            "deprecated": false,
+            "description": "The name of the provider you want to use",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "externalDocs": {
+          "description": "",
+          "url": ""
+        },
+        "responses": {
+          "200": {
+            "description": "Your user is redirected"
+          }
+        }
+      }
+    },
     "/auth/local": {
       "post": {
         "externalDocs": {
@@ -24,7 +122,7 @@
                 }
               },
               "example": {
-                "identifier": "user",
+                "identifier": "demo@nikhilnayak.dev",
                 "password": "superSecure123"
               }
             }
@@ -33,6 +131,39 @@
         "responses": {
           "200": {
             "description": "Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Users-PermissionsRegisterResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/{provider}/callback": {
+      "get": {
+        "tags": ["Authentication"],
+        "externalDocs": {
+          "description": "",
+          "url": ""
+        },
+        "parameters": [
+          {
+            "name": "provider",
+            "in": "path",
+            "description": "The provider used to authenticate your user",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfull redirection after approving a provider",
             "content": {
               "application/json": {
                 "schema": {
