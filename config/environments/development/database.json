@@ -5,16 +5,16 @@
       "connector": "strapi-hook-mongoose",
       "settings": {
         "client": "mongo",
-        "host": "127.0.0.1",
-        "srv": false,
-        "port": 27017,
-        "database": "strapi-heroku-app",
-        "username": "",
-        "password": ""
+        "uri": "mongodb://heroku_frq4kb39:eilrp3jilvkjo50o6fudn0rj92@ds013891.mlab.com:13891/heroku_frq4kb39",
+        "host": "ds013891.mlab.com",
+        "port": 13891,
+        "database": "heroku_frq4kb39",
+        "username": "heroku_frq4kb39",
+        "password": "eilrp3jilvkjo50o6fudn0rj92"
       },
       "options": {
-        "authenticationDatabase": "",
-        "ssl": false
+        "ssl": false,
+        "authenticationDatabase": "heroku_frq4kb39"
       }
     }
   }
